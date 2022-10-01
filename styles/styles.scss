@@ -1,0 +1,537 @@
+@import 'partials/vars', 'partials/reset', 'partials/mixins';
+
+body{
+    height: 100vh;
+    font-size: 100%;
+    font-family: $tipo-principal;
+    color: $negro;
+    background-color: $blanco;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: $blanco;
+    font-size: 1em;
+    &__sup {
+        // background-color: tomato;
+    }
+    &__med {
+        // background-color: tan;
+    }
+    &__inf {
+        // background-color: teal;
+    }
+  
+   
+    &__svg {
+    }
+}
+.hsup {
+    @include flexbox(row,nowrap,center,center);
+    gap: 1em;
+    font-size: .68em;
+    font-weight: 600;
+    background-color: $negro;
+    color: $blanco;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    padding: .6em;
+    text-align: center;
+    &__p {
+    }
+    &__svg{
+        width: 2em;
+        height: 2em;
+        font-size: .8em;
+    }
+}
+.hmed {
+    padding: .5em 3em;
+    background-color: $blanco;
+    font-size: .82em;
+
+    &__ul {
+        @include flexbox(row,nowrap,flex-end,center);
+        gap: 1.5em;
+    }
+    &__li {
+    }
+}
+
+
+.hinf {
+    @include flexbox(row,nowrap,space-between,flex-end);
+    padding: 1em 3em .6em 3em;
+    font-size: .9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    // background-color: #f1f158;
+
+    &__a {
+        // background-color: red;
+        position: relative;
+        // width: 5em;
+        // height: 5em;
+    }
+
+    &__h1 {
+        min-width: 20%;
+        // background-color: magenta;
+    }
+    &__logo {
+        position: absolute;
+        z-index: 3;
+        bottom: -.8em;
+        left: 0;
+        max-width: 4em;
+
+    }
+    &__sections {
+        @include flexbox(row,nowrap,center,center);
+        gap: 1.5em;
+        font-size: .98em;
+        flex-grow: 1;
+        margin-right: 5em;
+        // margin-top: .9em;
+    }
+    &__extra {
+        @include flexbox(row,nowrap,flex-end,center);
+        gap: 1.5em;
+    }
+}
+.sections {
+    &__li {
+        &:first-child,&:nth-child(2),&:nth-child(3){
+            font-weight: 600;
+        }
+    }
+}
+
+.extra {
+    &__input {
+        padding: .35em .6em;
+        background-color: $gris-fondo;
+        max-width: 15em;
+    }
+    &__svg {
+        width: 1.3em;
+        height: 1.3em;
+    }
+}
+
+
+
+
+.main {
+}
+
+.suscribe {
+    background-color: $azul;
+    padding: .98em 2em;
+    position: relative;
+    @include flexbox(row, nowrap,center,center);
+
+    color: $blanco;
+    &__p {
+    }
+    &__a{
+        text-decoration: underline;
+    }
+    &__svg {
+        position: absolute;
+        top: calc(100%/2 - .5em);
+        right: 2em;
+        width: 1em;
+        height: 1em;
+        cursor: pointer;
+    }
+}
+.memweek, .arg {
+    position: relative;
+    &__content{
+        position: absolute;
+        inset: 0;
+        @include flexbox(column,nowrap,center,center);
+        text-align:center;
+        gap: .6em;
+    }
+    &__a {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: .93em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: .4em 0;
+    }
+    &__h2 {
+        font-size: 1.9em;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__p {
+        font-size: 1.15em;
+        font-weight: 500;
+        max-width: 45em;
+        margin-bottom: .3em;
+        letter-spacing: -.3px;
+    }
+    &__img{
+    }
+}
+
+.memwadi {
+    padding: 3em;
+    background-color: $blanco;
+    overflow: hidden;
+    &__container {
+        @include flexbox(row,nowrap,space-between,center);
+        max-width: 25em;
+    }
+    &__img {
+    }
+}
+
+.memweek1 {
+    // background-color: lightblue;
+    position: relative;
+
+    &__content{
+        position: absolute;
+        top: 9.5em;
+        left: 8.5em;
+        @include flexbox(column,nowrap,flex-start,flex-start);
+        gap: 1em;
+    }
+    &__a {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: .93em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: .4em 0;
+    }
+    &__div {
+        @include flexbox(column,nowrap,flex-start,flex-start);
+        gap: 1em;
+
+    }
+    &__h2 {
+        font-size: 2.3em;
+        font-weight: 650;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &__p {
+        font-size: 1.15em;
+        max-width: 23em;
+        letter-spacing: -.3px;
+    }
+    &__img{
+    }
+}
+.meminfo {
+    padding-left: 6em;
+    &__p{
+    }
+    &__a {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: .4em 0;
+    }
+    &__top {
+        padding: 1em 2em;
+        @include flexbox(row,nowrap,flex-end,center);
+        gap: 1em;
+    }
+    
+
+}
+.meminfo__right,.news__right{
+    @include flexbox(row,nowrap,center,center);
+    gap: 5em;
+    // background-color: #f1f158;
+
+}
+.slider {
+    font-size: .9em;
+    padding: .5em 0 1em 0;
+    background-color: $blanco;
+    &__link {
+    }
+    &__cards {
+        padding: 3em 0 3em 10em;
+         @include flexbox(row,nowrap,center,center);
+         gap:2em;
+    }
+    &__card {
+        @include flexbox(column,nowrap,center,flex-start);
+        gap: .2em;
+        max-width: 18em;
+    }
+    &__container{
+        position: relative;
+
+    }
+    &__img {
+        background-color: lawngreen;
+    }
+    &__like {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: 1em;
+        height: 1em;
+    }
+    &__price {
+        position: absolute;
+        bottom: 0;
+        left: .5em;
+        background-color: $blanco;
+    }
+    &__h4 {
+    }
+    &__cat {
+        color: $gris;
+    }
+    &__data {
+        color: $azul;
+    }
+    &__btns{
+        // background-color: brown;
+        @include flexbox(row,nowrap,space-between,center);
+        gap: 2em;
+
+    }
+    &__btn{
+        
+    }
+    &__infoprod{
+        padding: 1em;
+    }
+  
+}
+
+.video-hero {
+    background-color: lightcyan;
+    max-height: 90vh;
+    width: 100%;
+    @include flexbox(column,nowrap,center,flex-start);
+    gap: 1em;
+    position: relative;
+    overflow: hidden;
+    &__video{
+        // width: 100%;
+        // height: 100%;
+    }
+    &__content{
+        position: absolute;
+        left: 8.5em;
+        @include flexbox(column,nowrap,center,flex-start);
+
+
+    }
+    &__btns {
+        background-color: aquamarine;
+    }
+    &__btn{
+        background-color: lightgreen;
+
+    }
+    &__h2 {
+        background-color: tomato;
+    }
+    &__p {
+        background-color: rgb(184, 42, 184);
+    }
+    &__play {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+
+        background-color: blue;
+    }
+}
+
+.arg {
+    background-color: royalblue;
+    &__a {
+    }
+    &__div {
+    }
+    &__h2 {
+    }
+    &__p {
+    }
+}
+.popular {
+    padding: 2em 3em;
+    background-color: rgb(201, 55, 55);
+
+    @include flexbox(column,nowrap,center,flex-start);
+    &__container {
+        background-color: navajowhite;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    &__h3 {
+        background-color: azure;
+        margin-bottom: 2em;
+    }
+    &__p{
+        background-color: #f1f158;
+    }
+    &__a {
+        background-color: rgb(44, 204, 103);
+    }
+ 
+}
+.forwho {
+    padding: 2em 3em;
+    background-color: cadetblue;
+    &__h3{
+        margin-bottom: 2em;
+        background-color: chartreuse;
+    }
+    &__card {
+        background-color: cornflowerblue;
+    }
+    &__cards {
+        background-color: coral;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:1em;
+    }
+    &__img {
+        min-height: 10vh;
+        min-width: 10vh;
+        background-color: goldenrod;
+    }
+    &__p {
+        background-color: rgb(201, 55, 55);
+    }
+}
+
+.div-clubs {
+    background-color: rgb(130, 238, 233);
+    @include flexbox(column, nowrap, center, center);
+
+    padding: 1em;
+    &__container {
+        @include flexbox(row, nowrap, center, center);
+        gap:1em;
+    }
+    &__h3 {
+        background-color: rgb(107, 176, 226);
+        margin-bottom: .5em;
+    }
+    &__img {
+    }
+}
+
+.news {
+    background-color: #f1b458;
+
+    &__top {
+        background-color: mediumaquamarine;
+        @include flexbox(row, nowrap, space-between, center);
+        padding: .5em 1em;
+
+    }
+    &__title{
+        background-color: aliceblue;
+        @include flexbox(row, nowrap, flex-start, center);
+
+    }
+    &__h3 {
+        background-color: blue;
+    }
+    &__a {
+        background-color: #f1f158;
+    }
+    &__btn{
+        background-color: navy;
+    }
+}
+
+
+.register {
+    &__button {
+    }
+    &__h4 {
+    }
+}
+
+.trends {
+    background-color: aliceblue;
+    margin: 3em 0;
+
+    &__link{
+
+    }
+    &__a {
+    }
+    &__card {
+    }
+    &__cardlink {
+    }
+    &__cards {
+    }
+    &__h3 {
+        background-color: rgb(244, 71, 71);
+    }
+    &__h4 {
+        background-color: aqua;
+    }
+    &__img {
+        background-color: mediumseagreen;
+    }
+    &__p {
+    }
+}
+.ocean {
+    background-color: #f1f158;
+    &__button {
+    }
+    &__h3 {
+}
+}
+
+.history {
+    &__article {
+    }
+    &__h3 {
+    }
+    &__p {
+    }
+}
+
+.finf {
+    &__li {
+    }
+    &__p {
+    }
+    &__row {
+    }
+    &__ul {
+    }
+}
+.fmed {
+    &__col {
+    }
+    &__h5 {
+    }
+    &__li {
+    }
+    &__ul {
+    }
+}
+.footer {
+    &__row {
+    }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+@font-face {
+    font-family: "AdihausDIN";
+    src: url("/assets/fonts/AdihausDIN-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "AdihausDIN";
+    src: url("/assets/fonts/AdihausDIN-Bold.woff2") format("woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "AdihausDIN";
+    src: url("/assets/fonts/adineuePRO-Bold.woff2") format("woff2");
+    font-weight: 650;
+}
+@font-face {
+    font-family: "AdihausDIN";
+    src: url("/assets/fonts/AdihausDIN-CnMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "AdihausDIN";
+    src: url("/assets/fonts/AdihausDIN-CnBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+$negro:#181818;
+$blanco:#ffff;
+$gris-fondo:#eceff1;
+$gris:#8b8b8b;
+$gris-oscuro:#5d5d5d;
+$azul:#007bc6;
+$tipo-principal:'AdihausDIN','Roboto',Helvetica, sans-serif;
+$tipo-secundario:Verdana;

@@ -44,6 +44,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
     text-decoration: none;
     color: inherit;
 }
+h2{
+    font-size: 2.3em;
+    font-weight: 650;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
 form, input, textarea, select, button, label {
     font-family: inherit;

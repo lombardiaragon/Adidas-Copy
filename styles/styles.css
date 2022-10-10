@@ -312,7 +312,7 @@ body {
   letter-spacing: -0.3px;
 }
 .meminfo {
-  padding-left: 6em;
+  margin: 2em 0;
 }
 .meminfo__a {
   text-transform: uppercase;
@@ -323,20 +323,38 @@ body {
   margin: 0.4em 0;
 }
 .meminfo__top {
-  padding: 1em 2em;
+  padding: 1em 2em 0 8.5em;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 1em;
 }
-
-.meminfo__right, .news__right {
+.meminfo__left {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+.meminfo__right {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 5em;
+}
+.meminfo__h3 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #d5d7d7;
+}
+.meminfo__h3:first-of-type {
+  color: #181818;
+}
+.meminfo__svg {
+  width: 2em;
+  height: 2em;
 }
 
 .slider {
@@ -649,16 +667,19 @@ body {
 }
 .ocean__button {
   background-color: #181818;
-  text-align: left;
   color: white;
   border: 1px solid white;
   text-transform: uppercase;
-  padding: 0.8em 2em;
+  padding: 0.8em 1em;
   font-size: 0.9em;
   letter-spacing: 1px;
   font-weight: 600;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
 }
-
 .history {
   padding: 1em 8.5em 0.5em;
   background-color: #f5f5e5;
@@ -699,10 +720,13 @@ body {
   max-width: 22em;
 }
 .register__button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   background-color: #181818;
   color: white;
   min-width: 15em;
-  text-align: left;
   padding: 0.8em 1em;
   text-transform: uppercase;
   font-weight: 600;
@@ -720,6 +744,11 @@ body {
   left: 3px;
   width: 100%;
   height: 100%;
+}
+.arrow {
+  fill: white;
+  width: 1.4em;
+  height: 1.4em;
 }
 
 .fmed {

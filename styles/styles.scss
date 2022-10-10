@@ -232,7 +232,7 @@ body{
     }
 }
 .meminfo {
-    padding-left: 6em;
+    margin: 2em 0;
     &__p{
     }
     &__a {
@@ -244,19 +244,33 @@ body{
         margin: .4em 0;
     }
     &__top {
-        padding: 1em 2em;
-        @include flexbox(row,nowrap,flex-end,center);
+        padding: 1em 2em 0 8.5em;
+        @include flexbox(row,nowrap,space-between,center);
         gap: 1em;
     }
-    
+    &__left{
+        @include flexbox(row,nowrap,space-between,center);
+        gap: 2em
 
+    }
+    &__right{
+        @include flexbox(row,nowrap,center,center);
+        gap: 5em;
+    }
+    &__h3{
+        font-size: 2em;
+        font-weight: 600;
+        color: $gris-claro;
+        &:first-of-type{
+            color: $negro;
+        }
+    }
+    &__svg{
+        width: 2em;
+        height: 2em;
+    }
 }
-.meminfo__right,.news__right{
-    @include flexbox(row,nowrap,center,center);
-    gap: 5em;
-    // background-color: #f1f158;
 
-}
 .slider {
     font-size: .9em;
     padding: .2em 0 1em 0;
@@ -499,6 +513,7 @@ body{
 }
 
 .news {
+    
     background-color: #f1b458;
 
     &__top {
@@ -597,16 +612,23 @@ body{
     }
     &__button {
         background-color: $negro;
-        text-align: left;
         color: $blanco;
         border: 1px solid $blanco;
         text-transform: uppercase;
-        padding: .8em 2em;
+        padding: .8em 1em;
         font-size: .9em;
         letter-spacing: 1px;
         font-weight: 600;
+        @include flexbox(row,nowrap,space-between,center);
+        gap: 1em;
+    }
+    &__span{
 
     }
+    &__svg{
+
+    }
+  
 
 }
 
@@ -647,10 +669,10 @@ body{
         max-width: 22em;
     }
     &__button {
+        @include flexbox(row,nowrap,space-between,center);
         background-color: $negro;
         color: $blanco;
         min-width: 15em;
-        text-align: left;
         padding: .8em 1em;
         text-transform: uppercase;
         font-weight: 600;
@@ -670,6 +692,15 @@ body{
             height: 100%;
         }
     }
+    &__svg{
+
+    }
+ 
+}
+.arrow{
+    fill: $blanco;
+    width: 1.4em;
+    height: 1.4em;
 }
 
 

@@ -112,6 +112,38 @@ body {
   overflow-x: hidden;
 }
 
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons a {
+  display: inline-block;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
 .header {
   background-color: white;
   font-size: 1em;
@@ -322,6 +354,11 @@ body {
   letter-spacing: 1px;
   margin: 0.4em 0;
 }
+.meminfo__a:hover {
+  background-color: #181818;
+  color: white;
+  text-decoration: none;
+}
 .meminfo__top {
   padding: 1em 2em 0 8.5em;
   display: flex;
@@ -408,7 +445,33 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
+}
+.slider__btn {
+  width: 2.8em;
+  height: 2.8em;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.slider__btn:first-child:before {
+  position: absolute;
+  padding: 4px 2px 0 0;
+  top: 6px;
+  right: 15px;
+  content: url(../assets/imgs/arrow-left-black-new.svg);
+}
+.slider__btn:last-child::before {
+  position: absolute;
+  top: 6px;
+  right: 15px;
+  padding: 4px 2px;
+  content: url(../assets/imgs/arrow-right-black-new.svg);
+}
+.slider__btn:hover {
+  background-color: #181818;
+}
+.slider__btn:hover::before {
+  filter: invert(27%) sepia(51%) saturate(0%) hue-rotate(346deg) brightness(200%) contrast(1000%);
 }
 .slider__infoprod {
   padding: 1em;
@@ -607,7 +670,12 @@ body {
 
 .trends {
   padding: 1em 8.5em 0.5em;
+  position: relative;
   margin: 3em 0;
+}
+.trends__link {
+  position: absolute;
+  bottom: 0;
 }
 .trends__a {
   text-transform: uppercase;
@@ -616,6 +684,12 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   margin: 0.4em 0;
+  transition: all 0.3s ease;
+}
+.trends__a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #181818;
 }
 .trends__cards {
   display: grid;
@@ -733,6 +807,7 @@ body {
   font-size: 1;
   letter-spacing: 1.2px;
   position: relative;
+  cursor: pointer;
 }
 .register__button::before {
   content: "";
@@ -746,9 +821,30 @@ body {
   height: 100%;
 }
 .arrow {
-  fill: white;
   width: 1.4em;
   height: 1.4em;
+}
+
+.global__btn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.global__btn:hover {
+  color: #8b8b8b;
+}
+.global__a {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0.4em 0;
+  transition: all 0.2s ease;
+}
+.global__a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #181818;
 }
 
 .fmed {

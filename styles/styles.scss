@@ -9,6 +9,50 @@ body{
     overflow-x: hidden;
 }
 
+////////////////////////////////////////////swiper
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .append-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .append-buttons a {
+    display: inline-block;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  /////////////////////////////////////////////////swiper
 .header {
     background-color: $blanco;
     font-size: 1em;
@@ -234,6 +278,7 @@ body{
 .meminfo {
     margin: 2em 0;
     &__p{
+      
     }
     &__a {
         text-transform: uppercase;
@@ -242,6 +287,11 @@ body{
         font-weight: 600;
         letter-spacing: 1px;
         margin: .4em 0;
+        &:hover{
+            background-color: $negro;
+            color: $blanco;
+            text-decoration: none;
+        }
     }
     &__top {
         padding: 1em 2em 0 8.5em;
@@ -318,10 +368,33 @@ body{
     &__btns{
         // background-color: brown;
         @include flexbox(row,nowrap,space-between,center);
-        gap: 2em;
-
     }
     &__btn{
+        width: 2.8em;
+        height: 2.8em;
+        cursor: pointer;
+        position: relative;
+        transition: all .2s ease;
+        &:first-child:before{
+            position: absolute;
+            padding: 4px 2px 0 0;
+            top: 6px;
+            right: 15px;
+            content: url(../assets/imgs/arrow-left-black-new.svg);
+        }
+        &:last-child::before{
+            position: absolute;
+            top: 6px;
+            right: 15px;
+            padding: 4px 2px;
+            content: url(../assets/imgs/arrow-right-black-new.svg);
+        }
+        &:hover{
+            background-color: $negro;
+            &::before{
+               filter: invert(27%) sepia(51%) saturate(0%) hue-rotate(346deg) brightness(200%) contrast(1000%);
+            }   
+        }
         
     }
     &__infoprod{
@@ -538,17 +611,15 @@ body{
     }
 }
 
-
-
-
 .trends {
     padding: 1em 8.5em .5em;
-
+    position: relative;
     // background-color: aliceblue;
     margin: 3em 0;
 
     &__link{
-
+        position: absolute;
+        bottom: 0;
     }
     &__a {
         text-transform: uppercase;
@@ -557,18 +628,23 @@ body{
         font-weight: 600;
         letter-spacing: 1px;
         margin: .4em 0;
+        transition: all .3s ease;
+
+        &:hover{
+            text-decoration: none;
+            color: $blanco;
+            background-color: $negro;
+        }
     }
     &__card {
     }
-    &__cardlink {
+    &__img-link {
     }
     &__cards {
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: .7em;
         padding: .6em 0;
-    }
-    &__card {
     }
     &__h3 {
         font-size: 2.5em;
@@ -679,6 +755,10 @@ body{
         font-size: 1;
         letter-spacing: 1.2px;
         position: relative;
+        cursor: pointer;
+        // &:hover{
+        //     color: $gris;
+        // }
         &::before{
             content:"";
             display: block;
@@ -698,10 +778,34 @@ body{
  
 }
 .arrow{
-    fill: $blanco;
     width: 1.4em;
     height: 1.4em;
 }
+.global{
+    &__btn{
+        cursor: pointer;
+        transition: all .2s ease;
+        &:hover{
+            color: $gris;
+        }
+    }
+    &__a{
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: .9em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: .4em 0;
+        transition: all .2s ease;
+    
+        &:hover{
+            text-decoration: none;
+            color: $blanco;
+            background-color: $negro;
+        }
+    }
+}
+
 
 
 .footer {

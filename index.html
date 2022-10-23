@@ -7,8 +7,23 @@
     <title>Adidas copy</title>
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/assets/fonts/AdihausDIN-Regular.woff2">
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+
 </head>
 <body>
+        <!-- Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
     <header class="header">
         <div class="header__sup hsup">
             <svg class="hsup__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
@@ -67,8 +82,8 @@
                 <h2 class="memweek__h2">members week</h2>
                 <p class="memweek__p">Solo por ser miembro de adiClub con tus compras te llevas una Tote Bag de regalo. Iniciá sesión o registrate para aprovechar.
                 </p>
-                <a href="#" class="memweek__a" title="Unite al club">comprar ahora</a>
-                <a href="#" class="memweek__a" title="Unite al club">ver términos</a>
+                <a href="#" class="global__a" title="Unite al club">comprar ahora</a>
+                <a href="#" class="global__a" title="Unite al club">ver términos</a>
             </div>
         </section>
         <div class="memwadi">
@@ -87,10 +102,10 @@
                     Celebrá Members Week con nosotros: unite a adiClub y vas a poder desbloquear los productos que más te gustan, disfrutar de lanzamientos exclusivos, accesos anticipados, sorpresas y mucho más.
                 </p>
                 <div class="memweek1__div">
-                    <a class="memweek1__a">
+                    <a class="global__a">
                         descubrí más
                     </a>
-                    <a class="memweek1__a">
+                    <a class="global__a">
                         comprar ahora
                     </a>
                 </div>
@@ -101,8 +116,8 @@
                 <div class="meminfo__right">
                     <p class="meminfo__p"><a href="#" class="meminfo__a" title="Ver todo">más información</a></p>
                     <div class="slider__btns">
-                        <img class="slider__btn" src="/assets/imgs/arrow-left-black-new.svg" alt="arrow left" loading="lazy">
-                        <img class="slider__btn" src="/assets/imgs/arrow-right-black-new.svg" alt="arrow left" loading="lazy">
+                        <button class="slider__btn"></button>
+                        <button class="slider__btn"></button>
                     </div>
                 </div>
             </div>
@@ -195,14 +210,14 @@
                 <h2 class="video-hero__h2">disfrutá de tu zona de confort</h2>
                 <p class="video-hero__p">Corré con un retorno de energía increíble en cada paso. Supernova 2.</p>
                 <div class="video-hero__btns">
-                    <a class="video-hero__btn">
-                       <span class="video-hero__span">mujer</span>
+                    <a class="video-hero__btn global__btn">
+                       <span class="video-hero__span ">mujer</span>
                        <svg class="video-hero__arrow" xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                        </svg>  
                     </a>
-                    <a class="video-hero__btn">
-                        <span class="video-hero__span">hombre</span> 
+                    <a class="video-hero__btn global__btn">
+                        <span class="video-hero__span ">hombre</span> 
                         <svg class="video-hero__arrow" xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                         </svg>
@@ -222,10 +237,10 @@
                         Todo lo que necesitás para mostrarles tu apoyo incondicional está a un clic de distancia.
                     </p>
                     <div class="arg__div">
-                        <a class="arg__a">
+                        <a class="global__a">
                             descubre más
                         </a>
-                        <a class="arg__a">
+                        <a class="global__a">
                             comprar ahora
                         </a>
                     </div>
@@ -294,10 +309,10 @@
                     <h3 class="meminfo__h3">Exclusivo miembros adiclub</h3>
                 </div>
                 <div class="meminfo__right">
-                    <p class="meminfo__p"><a href="#" class="meminfo__a" title="Ver todo">más información</a></p>
+                    <p class="meminfo__p"><a href="#" class="meminfo__a" title="Ver todo">ver todo</a></p>
                     <div class="slider__btns">
-                        <img class="slider__btn" src="/assets/imgs/arrow-left-black-new.svg" alt="arrow left" loading="lazy">
-                        <img class="slider__btn" src="/assets/imgs/arrow-right-black-new.svg" alt="arrow left" loading="lazy">
+                        <button class="slider__btn"></button>
+                        <button class="slider__btn"></button>
                     </div>
                 </div>
             </div>
@@ -388,44 +403,42 @@
             <h3 class="trends__h3">tendencias</h3>
             <div class="trends__cards">
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/river-d_tcm216-946051.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">De River de corazón</h4>
-                            <p class="trends__p">Nueva camiseta alternativa de River Plate, inspirada en la icónica camiseta roja de 1986.</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/river-d_tcm216-946051.jpg" alt="En tendencia" class="trends__img">    
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">De River de corazón</h4>
+                        <p class="trends__p">Nueva camiseta alternativa de River Plate, inspirada en la icónica camiseta roja de 1986.</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/boca-d_tcm216-946053.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Boca te llevo en el alma</h4>
-                            <p class="trends__p">Nueva camiseta alternativa de Boca Juniors, inspirada en icónicos diseños de fines de los años ’90.</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/boca-d_tcm216-946053.jpg" alt="En tendencia" class="trends__img">
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">Boca te llevo en el alma</h4>
+                        <p class="trends__p">Nueva camiseta alternativa de Boca Juniors, inspirada en icónicos diseños de fines de los años ’90.</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/madre-d_tcm216-950416.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Sorprendela en su día</h4>
-                            <p class="trends__p">Buscá el regalo para mamá en el catálogo seleccionado y participá por una sorpresa única.</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/madre-d_tcm216-950416.jpg" alt="En tendencia" class="trends__img">
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">Sorprendela en su día</h4>
+                        <p class="trends__p">Buscá el regalo para mamá en el catálogo seleccionado y participá por una sorpresa única.</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/running-fw22-berlin-marathon-reactive-marathon-winner-launch-com-hp-glp-teaser-carousel-final-d_tcm216-946462.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Ganadora del maratón de Berlín</h4>
-                            <p class="trends__p">02:15:37_Tigist Assefa_ADIZERO ADIOS PRO.</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/running-fw22-berlin-marathon-reactive-marathon-winner-launch-com-hp-glp-teaser-carousel-final-d_tcm216-946462.jpg" alt="En tendencia" class="trends__img">
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <h4 class="trends__h4">Ganadora del maratón de Berlín</h4>
+                    <p class="trends__p">02:15:37_Tigist Assefa_ADIZERO ADIOS PRO.</p>
+                    <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
                 </div>
             </div>
         </section>
@@ -433,44 +446,44 @@
             <h3 class="trends__h3">encontrá tus zapatillas para correr</h3>
             <div class="trends__cards">
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-01-d_tcm216-798290.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Comodidad</h4>
-                            <p class="trends__p">Zapatillas de running para principiantes</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-01-d_tcm216-798290.jpg" alt="En tendencia" class="trends__img">
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">Comodidad</h4>
+                        <p class="trends__p">Zapatillas de running para principiantes</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
+                    <a href="#" title="Productos" class="trends__img-link">
                             <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-02-d_tcm216-798295.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Amortiguación</h4>
-                            <p class="trends__p">Zapatillas de running para usar a diario</p>
-                        </div>
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">Amortiguación</h4>
+                        <p class="trends__p">Zapatillas de running para usar a diario</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-03-d_tcm216-798297.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Ligereza</h4>
-                            <p class="trends__p">Zapatillas de running de competición</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-03-d_tcm216-798297.jpg" alt="En tendencia" class="trends__img">
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">Ligereza</h4>
+                        <p class="trends__p">Zapatillas de running de competición</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
                 <div class="trends__card">
-                    <a href="#" title="Productos" class="trends__cardlink">
-                        <div class="trends__card">
-                            <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-04-d_tcm216-798298.jpg" alt="En tendencia" class="trends__img">
-                            <h4 class="trends__h4">Sujeción</h4>
-                            <p class="trends__p">Zapatillas de running para entrenar en distancias largas</p>
-                        </div>
+                    <a href="#" title="Productos" class="trends__img-link">
+                        <img src="/assets/imgs/running-ss22-ultraboost-running-refresh-catlp-teaser-carousel-04-d_tcm216-798298.jpg" alt="En tendencia" class="trends__img">
                     </a>
-                    <p class="trends__link"><a href="#" class="trends__a" title="comprar ahora">comprar ahora</a></p>
+                    <div class="trends__info">
+                        <h4 class="trends__h4">Sujeción</h4>
+                        <p class="trends__p">Zapatillas de running para entrenar en distancias largas</p>
+                        <p class="trends__link"><a href="#" class="global__a" title="comprar ahora">comprar ahora</a></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -478,8 +491,8 @@
             <img src="/assets/imgs/statement_dt_tcm216-741849.jpg" alt="ocean" loading="lazy">
             <div class="ocean__content">
                 <h3 class="ocean__h3">proteger los océanos es nuestra principal prioridad. nuestra misión va más allá del deporte. es nuestro futuro.</h3>
-                <button class="ocean__button">
-                    <span class="ocean__span">conocé más</span>
+                <button class="ocean__button global__btn">
+                    <span class="ocean__span ">conocé más</span>
                     <svg class="ocean__svg arrow"  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
@@ -491,8 +504,8 @@
                 <div class="meminfo__right">
                     <p class="meminfo__p"><a href="#" class="meminfo__a" title="Ver todo">más información</a></p>
                     <div class="slider__btns">
-                        <img class="slider__btn" src="/assets/imgs/arrow-left-black-new.svg" alt="arrow left" loading="lazy">
-                        <img class="slider__btn" src="/assets/imgs/arrow-right-black-new.svg" alt="arrow left" loading="lazy">
+                        <button class="slider__btn"></button>
+                        <button class="slider__btn"></button>
                     </div>
                 </div>
             </div>
@@ -601,7 +614,7 @@
             <div class="register__content">
                 <h4 class="register__h4">unite al club y conseguí un 15% de descuento
                 </h4>
-                <button class="register__button">
+                <button class="register__button global__btn">
                     <span class="register__span">registrate gratis</span> 
                     <svg class="register__svg arrow"  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
